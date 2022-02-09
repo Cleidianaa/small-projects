@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice cream Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <!--Header Start-->
+        <header>
+            <a href="#" class="logo">
+                <img src="/img/logo1.png">
+            </a>
+            <ul class="ul">
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">What's New</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </header>
+        <!--Header End-->
+
+        <!--Home End-->
+        <div class="content">
+            <div class="texBox">
+                <h2>it's not just ice cream<br>it's <span>ice cream</span></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic iusto odit quod recusandae autem ab, ad quibusdam tenetur. Dolorum debitis illum quia saepe dolorem neque ipsa quasi veritatis repellat iste!</p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="imgBox">
+                <img src="/img/fot.png"  class="ice-cream">
+            </div>
+        </div>
+        <!--Home End-->
+        <!-----  styles for img start----->
+        <ul class="thumb">
+            <li><img src="/img/ice1.png" onclick="imgSlider('/img/thumb3.png'),changeCircleColor('#a15142')"></li>
+            <li><img src="/img/ice2.png" onclick="imgSlider('/img/thumb2.png'),changeCircleColor('#eb7144')"></li>
+            <li><img src="/img/ice3.png" onclick="imgSlider('/img/thumb1.png'),changeCircleColor('#d752a1')"></li>
+        </ul>
+        <ul class="socialMidia">
+            <li><a href="#"><img src="/img/facebookk.png"></a></li>
+            <li><a href="#"><img src="/img/twitter.png"></a></li>
+            <li><a href="#"><img src="/img/instagram.png"></a></li>
+        </ul>
+    </section>
+    <!------- Javascript ------>
+    <script src="script.js"></script>
+</body>
+</html>

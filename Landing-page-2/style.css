@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Libre+Franklin:wght@100&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/*-------  Header Start ---------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    background: #ecf5c5a1;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+header .logo{
+    position: relative;    
+}
+header .logo img{
+    max-width: 70px;   
+}
+/*-------  Header End ---------*/
+/*-------  Itens Menu Start---------*/
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    display: inline-block;
+    color: #333333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+/*-------  Itens Menu End---------*/
+/*-------  Home Start---------*/
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.content .texBox{
+    position: relative;
+    max-width: 600px;
+}
+.content .texBox h2{
+    color: #333333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.content .texBox h2 span{
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.content .texBox p{
+    color: #333333;
+}
+.content .texBox a{
+    display: inline-block;
+    padding: 8px 20px;
+    background: #017143;
+    color: #ffffff;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.1;
+   
+}
+
+.content .imgBox{
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    margin-top: 60px;
+}
+.content .imgBox img{
+    max-width: 800px;
+}
+/*-------  Home End---------*/
+/*-----  styles for img start-----*/
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%);
+    display: flex;
+}
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.thumb li img{
+   max-width: 40px; 
+}
+.socialMidia{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.socialMidia li {
+    list-style: none;
+}
+.socialMidia li a{
+    display: inline-block;
+    margin:  -1px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+.socialMidia li a img{
+    max-width: 45px;
+}
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 750px);
+}
