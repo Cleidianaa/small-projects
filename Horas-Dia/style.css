@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+body{
+    padding: 30px;
+    background: rgb(43, 150, 168);
+    font: normal 15px Arial;
+}
+header{
+    padding: 50px;
+    color: rgba(226, 210, 226);
+    text-align: center;
+    text-transform: capitalize;
+}
+section{
+    background: rgba(226, 210, 226);
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgb(131, 83, 83);
+
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border-top: 10px;
+    text-align: center;
+    
+}
+div{
+    text-align: center;
+    padding: 8px;
+}
+
+footer{
+    padding-top: 30px;
+    color: rgb(226, 210, 226);
+    text-align: center;
+    text-transform: capitalize;
+    font-style: italic;
+}
