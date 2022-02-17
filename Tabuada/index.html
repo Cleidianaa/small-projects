@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+<!-- style start -->
+<style>
+body{
+    padding: 30px;
+    background: rgb(173, 219, 228);
+    font: normal 17px Arial;
+}
+header{
+    padding: 50px;
+    color: rgb(245, 13, 245);
+    text-align: center;
+    text-transform: capitalize;
+}
+section{
+    background: rgb(236, 223, 236);
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgb(131, 83, 83);
+}
+div{
+    
+    padding: 30px;
+}
+input{
+    max-width:  150px;
+    border: 1px;
+    border-radius: 5px;
+    box-sizing: 8px;
+    padding: 5px;
+    font: normal 14px Arial;
+    text-align: center;
+}
+select{
+    width: 110px;
+    border: 1px;
+    border-radius: 5px;
+    box-sizing: 8px;
+    padding: 5px;
+    font: normal 14px Arial;
+    text-align: center;
+}
+footer{
+    padding-top: 30px;
+    color: rgb(245, 13, 245);
+    text-align: center;
+    text-transform: capitalize;
+    font-style: italic;
+}
+</style>
+<!-- style end -->
+<!-- start body -->
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número:
+                <input type="number" name="num" id="textn">   
+                <input  type="btn" value="Gerar Tabuada" onclick="tabuada()">
+            </p>
+        </div>
+        <div>
+           <select name="tabuada" id="seltab" size="10">
+               <option>Digite um número acima</option>
+           </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script>
+       function tabuada(){
+           let num = document.getElementById('textn')
+           let tab = document.getElementById('seltab')
+           if (num.value.length == 0){
+               window.alert('Por favor, digite um número!')
+           } else {
+               let n = Number(num.value)
+               let c = 1
+               tab.innerHTML = ''
+               while (c <= 10){
+                   let item = document.createElement('option')
+                   item.text = `${n} x ${c} = ${n*c}`
+                   item.value = `tab${c}`
+                   tab.appendChild(item)
+                   c++
+               }
+           }
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+<!-- style start -->
+<style>
+body{
+    padding: 30px;
+    background: rgb(173, 219, 228);
+    font: normal 17px Arial;
+}
+header{
+    padding: 50px;
+    color: rgb(245, 13, 245);
+    text-align: center;
+    text-transform: capitalize;
+}
+section{
+    background: rgb(236, 223, 236);
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgb(131, 83, 83);
+}
+
+div{
+    text-size-adjust: 18px;
+    padding: 30px;
+}
+input{
+    max-width:  150px;
+    border: 1px;
+    border-radius: 5px;
+    box-sizing: 8px;
+    padding: 5px;
+    font: normal 14px Arial;
+    text-align: center;
+}
+
+footer{
+    padding-top: 30px;
+    color: rgb(245, 13, 245);
+    text-align: center;
+    text-transform: capitalize;
+    font-style: italic;
+}
+</style>
+<!-- style end -->
+<!-- start body -->
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p> Início:
+                <input type="number" name="inicio" id="texti">   
+            </p>
+            <p> Fim:
+                <input type="number" name="fim" id="textf">   
+            </p>
+            <p> Passos:
+                <input type="number" name="passo" id="textp">   
+            </p>
+            <p>
+                <input  type="btn" value="Contar" onclick="contar()">
+            </p>
+        </div>
+        <div id="res">
+            Preparadno a contagem ...
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script>
+        function contar(){
+            let ini = document.getElementById('texti')
+            let fim = document.getElementById('textf')
+            let passo = document.getElementById('textp')
+            let res = document.getElementById('res')
+            
+            if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+               // window.alert(`[ERRO] Faltam dados!`)
+            }else {
+                res.innerHTML = 'Contando:'
+                let i = Number(ini.value)
+                let f = Number(fim.value)
+                let p = Number(passo.value)
+                if(p <= 0) {
+                    window.document('Passo inválido! Consideradno PASSO 1')
+                    p = 1
+                }
+                if (i < f) {
+                    // Contagem crescente
+                    for(let c = i; c <= f; c += p) {
+                        res.innerHTML += `${c} \u{1F449}`
+                    }
+               } else {
+                   // Contagem regressiva
+                   for(let c = i; c >= f; c -= p){
+                       res.innerHTML += `${c} \u{1F449}`
+
+                   }
+               }
+               res.innerHTML += `\u{1F3c1}`
+            }
+        }  
+    </script>
+</body>
+</html>
